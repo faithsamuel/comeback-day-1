@@ -3,8 +3,13 @@ console.log("Day3: Javascript is awake");
 const button = document.querySelector("button");
 const headerText = document.querySelector("header p");
 
-console.log(button);
-console.log(headerText);
+const input = document.querySelector(".todo input");
+const addBtn = document.querySelector(".todo-input button");
+const list = document.querySelector(".todo-list");
+
+console.log(input);
+console.log(addBtn);
+console.log(list);
 
 // Event Listener
 
@@ -21,3 +26,14 @@ button.addEventListener("click", () => {
 
     isReset = !isReset;
 });
+
+// Add EVent Listener to Todo list
+
+// addBtn.addEventListener("click", () => {
+//     if(input.value === "") return;
+
+//     const li = document.createElement("li");
+//     li.textContent = input.value;
+
+
+// });

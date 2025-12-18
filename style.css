@@ -66,6 +66,33 @@ button:active {
 }
 
 
+/* Todo */
+.todo {
+    margin-top: 3rem;
+}
+
+.todo-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.todo input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #f4f4f4;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* media queries */
 
 @media(min-width: 768px) {
