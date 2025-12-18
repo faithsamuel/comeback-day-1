@@ -61,6 +61,10 @@ button:hover {
     background: #e0b820;
 }
 
+button:active {
+    transform: scale(0.97);
+}
+
 
 /* media queries */
 
