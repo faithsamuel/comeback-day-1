@@ -1,4 +1,4 @@
-console.log("Day3: Javascript is awake");
+let tasks = [];
 
 const button = document.querySelector("button");
 const headerText = document.querySelector("header p");
