@@ -27,13 +27,19 @@ button.addEventListener("click", () => {
     isReset = !isReset;
 });
 
-// Add EVent Listener to Todo list
+// EVent Listener to add  a Todo item
 
-// addBtn.addEventListener("click", () => {
-//     if(input.value === "") return;
+addBtn.addEventListener("click", () => {
+    if(input.value === "") return;
 
-//     const li = document.createElement("li");
-//     li.textContent = input.value;
+    const li = document.createElement("li");
+    li.textContent = input.value;
 
+    li.addEventListener("click", () => {
+        li.remove();
+    });
 
-// });
+    list.appendChild(li);
+    input.value = "";
+});
+
