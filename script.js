@@ -51,6 +51,14 @@ button.addEventListener("click", () => {
 // });
 
 
+
+// Press Enter to add a task.
+input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        addBtn.click();
+    }
+});
+
 // New Event Listener to save Tasks to Local storage
 
 addBtn.addEventListener("click", () => {
