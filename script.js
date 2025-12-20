@@ -7,6 +7,13 @@ const input = document.querySelector(".todo input");
 const addBtn = document.querySelector(".todo-input button");
 const list = document.querySelector(".todo-list");
 
+const storedTasks = localStorage.getItem("tasks");
+
+if(storedTasks) {
+    tasks = JSON.parse(storedTasks);
+    renderTasks();
+}
+
 console.log(input);
 console.log(addBtn);
 console.log(list);
@@ -27,19 +34,54 @@ button.addEventListener("click", () => {
     isReset = !isReset;
 });
 
-// EVent Listener to add  a Todo item
+// Event Listener to add  a Todo item
+
+// addBtn.addEventListener("click", () => {
+//     if(input.value === "") return;
+
+//     const li = document.createElement("li");
+//     li.textContent = input.value;
+
+//     li.addEventListener("click", () => {
+//         li.remove();
+//     });
+
+//     list.appendChild(li);
+//     input.value = "";
+// });
+
+
+// New Event Listener to save Tasks to Local storage
 
 addBtn.addEventListener("click", () => {
-    if(input.value === "") return;
+    if (input.value === "") return;
 
-    const li = document.createElement("li");
-    li.textContent = input.value;
+    const taskText = input.value;
 
-    li.addEventListener("click", () => {
-        li.remove();
-    });
+    tasks.push(taskText);
+    saveTasks();
+    renderTasks();
 
-    list.appendChild(li);
     input.value = "";
 });
 
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function renderTasks() {
+    list.innerHTML = "";
+
+    tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.textContent = task;
+
+        li.addEventListener("click", () => {
+            tasks.splice(index, 1);
+            saveTasks();
+            renderTasks();
+        });
+
+        list.appendChild(li);
+    });
+}
