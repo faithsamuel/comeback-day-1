@@ -14,9 +14,6 @@ if(storedTasks) {
     renderTasks();
 }
 
-console.log(input);
-console.log(addBtn);
-console.log(list);
 
 // Event Listener
 
