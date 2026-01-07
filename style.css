@@ -68,7 +68,10 @@ button:active {
 
 /* Todo */
 .todo {
+    background: white;
+    padding: 2rem;
     margin-top: 3rem;
+    border-radius: 10px;
 }
 
 .todo-input {
@@ -91,6 +94,11 @@ button:active {
     margin-bottom: 0.5rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-list li:hover {
+    background: #eaeaea;
 }
 
 /* media queries */

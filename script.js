@@ -82,11 +82,15 @@ function renderTasks() {
         li.textContent = task;
 
         li.addEventListener("click", () => {
-            todoItems.splice(index, 1);
-            saveTasks();
-            renderTasks();
+            removeTask(index);
         });
 
         todoList.appendChild(li);
     });
+}
+
+function removeTask(index) {
+    todoItems.splice(index, 1);
+    saveTasks();
+    renderTasks();
 }
