@@ -1,3 +1,10 @@
+const sampleTasks = [
+    {id: 1, title:"Pray" },
+    {id: 2, title:"Code" },
+    {id: 3, title:"Rest" },
+    
+];
+
 let todoItems = [];
 
 const button = document.querySelector("button");
