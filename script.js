@@ -5,6 +5,27 @@ const sampleTasks = [
     
 ];
 
+const mappedTasks = sampleTasks.map((task) => {
+    return task.title;
+})
+
+console.log(mappedTasks);
+
+//map() DOM rendering 
+// function renderSampleTasks() {
+//     list.innerHTML = "";
+
+//     sampleTasks.map((task) => {
+//         const li = document.createElement("li");
+//         li.textContent = task.title;
+//         list.appendChild(li);
+//     });
+// }
+
+// renderSampleTasks();
+
+
+
 let todoItems = [];
 
 const button = document.querySelector("button");
