@@ -11,20 +11,15 @@ const mappedTasks = sampleTasks.map((task) => {
 
 console.log(mappedTasks);
 
-//map() DOM rendering 
-// function renderSampleTasks() {
-//     list.innerHTML = "";
 
-//     sampleTasks.map((task) => {
-//         const li = document.createElement("li");
-//         li.textContent = task.title;
-//         list.appendChild(li);
-//     });
-// }
+//***********Renamed variables ************ */
 
-// renderSampleTasks();
+// tasks → todoItems
+// list → todoList
+// input → taskInput
+// addBtn → addTaskButton
 
-
+//*********************** */
 
 let todoItems = [];
 
@@ -42,6 +37,20 @@ if(storedTasks) {
     renderTasks();
 }
 
+
+//map() DOM rendering 
+
+function renderSampleTasks() {
+    todoList.innerHTML = "";
+
+    sampleTasks.map((task) => {
+        const li = document.createElement("li");
+        li.textContent = task.title;
+        todoList.appendChild(li);
+    });
+}
+
+renderSampleTasks();
 
 // Event Listener
 
