@@ -64,7 +64,24 @@ const filteredTasks = sampleTasks.filter((task) => {
 
 const foundTask = sampleTasks.find((task) => task.id === 2);
 
-console.log(foundTask);
+// console.log(foundTask);
+
+
+// Spread Operator
+
+// Instead of using .push()
+// sampleTasks.push({id: 4, title: "Read"});
+
+// Use the spread Operator to avoid mutation
+const newTasks = [ ...sampleTasks, {id: 4, title: "Read"}];
+// console.log(newTasks);
+
+
+// Destructuring 
+const task = {id: 5, title: "Build"};
+
+const { id, title} = task;
+console.log(id, title);
 
 // Event Listener
 
