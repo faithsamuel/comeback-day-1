@@ -9,7 +9,7 @@ const mappedTasks = sampleTasks.map((task) => {
     return task.title;
 })
 
-console.log(mappedTasks);
+// console.log(mappedTasks);
 
 
 //***********Renamed variables ************ */
@@ -51,6 +51,20 @@ function renderSampleTasks() {
 }
 
 renderSampleTasks();
+
+// filter() method
+
+const filteredTasks = sampleTasks.filter((task) => {
+    return task.title !== "Rest";
+});
+
+// console.log(filteredTasks);
+
+// find()
+
+const foundTask = sampleTasks.find((task) => task.id === 2);
+
+console.log(foundTask);
 
 // Event Listener
 
