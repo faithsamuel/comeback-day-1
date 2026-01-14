@@ -81,7 +81,9 @@ const newTasks = [ ...sampleTasks, {id: 4, title: "Read"}];
 const task = {id: 5, title: "Build"};
 
 const { id, title} = task;
-console.log(id, title);
+// console.log(id, title);
+
+
 
 // Event Listener
 
