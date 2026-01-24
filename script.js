@@ -5,6 +5,14 @@ const sampleTasks = [
     
 ];
 
+const movies = [
+    {title: "Snow", year: "2020", rating: "3.5"},
+    {title: "Wall Street", year: "1970", rating: "4.1"},
+    {title: "China", year: "1780", rating: "4.0"},
+    {title: "Chakra", year: "2022", rating: "3.5"},
+    {title: "Pretty Woman", year: "1995", rating: "5.o"},
+];
+
 const mappedTasks = sampleTasks.map((task) => {
     return task.title;
 })
