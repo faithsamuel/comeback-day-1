@@ -13,6 +13,11 @@ const movies = [
     {title: "Pretty Woman", year: "1995", rating: "5.o"},
 ];
 
+// map movies
+const mapMovies = movies.map((movie) => {
+    return movie.title;
+})
+
 const mappedTasks = sampleTasks.map((task) => {
     return task.title;
 })
