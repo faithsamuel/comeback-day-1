@@ -20,9 +20,17 @@ const mapMovies = movies.map((movie) => {
 
 // console.log(mapMovies);
 
+//filter Movies
 const filterMovies = movies.filter(movie => movie.rating > 7);
 
-console.log(filterMovies)
+// console.log(filterMovies)
+
+
+// FInd Movie
+
+const findMovie = movies.find(movie => movie.title === "Pretty Woman")
+
+console.log(findMovie);
 
 
 const mappedTasks = sampleTasks.map((task) => {
