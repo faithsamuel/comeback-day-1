@@ -30,8 +30,17 @@ const filterMovies = movies.filter(movie => movie.rating > 7);
 
 const findMovie = movies.find(movie => movie.title === "Pretty Woman")
 
-console.log(findMovie);
+// console.log(findMovie);
 
+// Add a movie
+
+const addMovie = [
+
+    ...movies , {title: "Coming to America", year: "1995", rating: 10}
+]
+
+
+console.log(addMovie);
 
 const mappedTasks = sampleTasks.map((task) => {
     return task.title;
